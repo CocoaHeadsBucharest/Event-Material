@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ArMeasure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TvM-k9-zTa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9UC-qP-8tZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="BV1-FR-VrT" id="tlB-KO-ny4"/>
+                                    <outletCollection property="gestureRecognizers" destination="2pK-Yh-CTU" appends="YES" id="17t-Be-caj"/>
+                                </connections>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYY-eu-shY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nnQ-DX-3bR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9UC-qP-8tZ" firstAttribute="bottom" secondItem="jBT-em-cIL" secondAttribute="bottom" id="RhZ-aF-nnn"/>
+                            <constraint firstItem="tYY-eu-shY" firstAttribute="top" secondItem="jBT-em-cIL" secondAttribute="top" id="Z7c-Dw-ees"/>
+                            <constraint firstItem="tYY-eu-shY" firstAttribute="leading" secondItem="jBT-em-cIL" secondAttribute="leading" id="fhU-lC-dGp"/>
+                            <constraint firstItem="9UC-qP-8tZ" firstAttribute="trailing" secondItem="jBT-em-cIL" secondAttribute="trailing" id="hln-TX-iN0"/>
+                            <constraint firstItem="9UC-qP-8tZ" firstAttribute="leading" secondItem="jBT-em-cIL" secondAttribute="leading" id="lSy-Mi-fzs"/>
+                            <constraint firstItem="9UC-qP-8tZ" firstAttribute="top" secondItem="TvM-k9-zTa" secondAttribute="top" id="njp-MD-EFk"/>
+                            <constraint firstItem="jBT-em-cIL" firstAttribute="trailing" secondItem="tYY-eu-shY" secondAttribute="trailing" id="soH-P0-FSt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jBT-em-cIL"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="tYY-eu-shY" id="ygW-Pr-Ceh"/>
+                        <outlet property="sceneView" destination="9UC-qP-8tZ" id="clh-er-olZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2pK-Yh-CTU">
+                    <connections>
+                        <action selector="didTapWithGestureRecognizer:" destination="BV1-FR-VrT" id="eFn-T8-DCz"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+    </scenes>
+</document>
