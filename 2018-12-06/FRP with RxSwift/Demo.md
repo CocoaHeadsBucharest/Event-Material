@@ -1,1 +1,1 @@
-[Demo prpoject](https://github.com/c0diq/RxDemo)
+[Demo project](https://github.com/c0diq/RxDemo)
